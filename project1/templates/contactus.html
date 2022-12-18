@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Bootstrap Website
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>    
+    </head>
+    <body>
+        <div class="container-fluid">
+
+          
+          {% include 'header.html' %}
+            <div class="col-md-12">
+                
+                <img src="images/rmd.jpg" alt="Website Banner Image" style="height:200px;width:100%;"/>
+                
+            </div><!-- Banner div close -->
+            <!--div class="col-md-12">
+
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <a class="navbar-brand" href="#">RMD Sinhgad</a>
+                      </div>
+                      <ul class="nav navbar-nav">
+                        <li class="active"><a href="{% url "home"%}">Home</a></li>
+                        <li class="dropdown">
+                          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Courses
+                          <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Engineering</a></li>
+                            <li><a href="#">MBA</a></li>
+                            <li><a href="#">Page 1-3</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+
+            </div--><!-- Menu div close -->
+            
+            <div class="col-md-12">
+              <div class="col-md-4">
+                  <img src="{%static "dyplogo.jpeg" %}" style="height:400px;width:100%;"/>              
+              </div><!-- logo div close -->
+              <div class="col-md-8">
+                
+                <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
+                  <div class="container">
+                    <div class="row d-flex align-items-stretch no-gutters">
+                      <div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
+                        <form action="contactus" method="POST" name="contactus_form">
+                          <!-- In front of action="this name should be path name of contactus() function which we write in urls.py file as views.contactus" -->
+              
+                          {% csrf_token %}
+                  <!-- Cross-Site Request Forgery (CSRF) is an attack that forces authenticated users to submit a request to a Web application against which they are currently authenticated.
+                  CSRF Token used to prevent unathorized person could not submit form from your website-->
+                          <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" name="name">
+                          </div>
+                          <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" name="email">
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Contact No." name="phone">
+                          </div>
+                          <div class="form-group">
+                            <textarea name="address" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <input type="submit" value="Submit" class="btn btn-primary py-3 px-5" name="submit">
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-md-6 d-flex align-items-stretch">
+                        <div id="map"></div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div><!-- Google Map div close -->
+              
+            </div><!-- Section or Outer div close -->
+
+            {% include "footer.html"%}
+
+            <!--div class="row">
+              <center><b><i>Designed and Developed By Your Name</i></b></center>
+            </div><!--Footer div close-->
+
+      </div><!-- Container div close -->
+    </body>
+</html>
