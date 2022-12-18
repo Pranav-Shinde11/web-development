@@ -1,0 +1,130 @@
+{% load static %} 
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Bootstrap Website
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>    
+    
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+      </head>
+    <body>
+        {% include 'header.html'%}
+        <!--div class="container-fluid">
+            <div class="col-md-12">
+                
+                <img src="static/rmd.jpg" alt="Website Banner Image" style="height:200px;width:100%;"/>
+                
+            </div><!-- Banner div close -->
+            <!--div class="col-md-12">
+
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <a class="navbar-brand" href="#">DYPIEMR</a>
+                      </div>
+                      <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li class="dropdown">
+                          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Courses
+                          <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Engineering</a></li>
+                            <li><a href="#">MBA</a></li>
+                            <li><a href="#">Page 1-3</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="{% url "contactus"%}">Contact Us</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+
+            </div><!-- Menu div close -->
+            <div class="col-md-12"-->
+
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                  
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img src="{% static "dyp.jpg"%}" style="height:400px;width:100%;" alt="Los Angeles">
+                      </div>
+                  
+                      <div class="item">
+                        <img src="{% static "campus.jpg"%}" style="height:400px;width:100%;" alt="Chicago">
+                      </div>
+                  
+                      <div class="item">
+                        <img src="{% static "dypatil.jpg"%}" style="height:400px;width:100%;" alt="New York">
+                      </div>
+                    </div>
+                  
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+
+            </div><!-- Slider div close -->
+            <div class="col-md-12">
+              <div class="col-md-3" data-aos="zoom-in">
+                  <img src="{% static "dyplogo.jpeg"%}" style="height:300px;width:100%;"/>              
+              </div><!-- logo div close -->
+              <div class="col-md-6" style="background-color:grey;" data-aos="fade-left">
+                <P>
+                  <h2>WE KEEP OUR CAMPUS A BETTER PLACE AS YOU WANT</h2>
+It's not hard to make decisions when you know what your values are.
+India is a country with one third of the population being young who are & will play a major role in transforming India economically and socially. We believe the essence of unique values to be
+                </P>
+              </div><!-- paragraph div close -->
+              <div class="col-md-3">
+
+                <marquee direction="up" style="height:500px;">
+                  Welcome to Training and Internship
+                </marquee>
+
+              </div><!-- News Block div close -->
+            </div><!-- Section or Outer div close -->
+
+            <!--div class="row">
+              <center><b><i>Designed and Developed By Your Name</i></b></center>
+            </div><!--Footer div close-->
+            
+
+                  
+                  
+
+                  
+              
+          {%include 'footer.html'%}
+
+      </div><!-- Container div close -->
+    
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+      <script>
+        AOS.init();
+      </script>
+    
+    </body>
+</html>
