@@ -1,9 +1,21 @@
 {% extends "base.html" %}
 
 {%block content%}
-    <h1 class="my-5">these are the notes :</h1>
+    <h1 class="my-5">These Are My Notes:</h1>
+    <div class='ms-auto'>
+       
+        {% if user.is_authenticated %}
+        
+        <a href="{% url 'notes.new'%}" class="btn btn-primary btn-lg">Add Note +</a>
+        
+        {% else %}
+        <a href="{% url 'login'%}" class="btn btn-outline-light me-1">Login</a>
+        
+        <a href="{% url 'signup'%}" class="btn btn-outline-light me-1">Signup</a>
 
-    <div class="row row-cols3 g-2 ">
+        {% endif %}
+      </div>
+    <div class="row row-cols3 g-2 " >
         {% for note in notes %}
         <div class = "col">
             <div class="p-3 border">
