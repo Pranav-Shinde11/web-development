@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-deployment
+  labels:
+    app: Django
+spec:
+  template:
+    metadata:
+      labels:
+        app: Django
+    spec:
+      containers:
+        - name: django-container
+          image: yes8055/pranav-jango-app
+          ports:
+            - containerPort: 5000
+  selector:
+    matchLabels:
+      app: Django
+  replicas: 1
